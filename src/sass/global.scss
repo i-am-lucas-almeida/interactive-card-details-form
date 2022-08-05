@@ -16,3 +16,8 @@ body {
     font-size: 1.8rem;
     font-family: $font;
 }
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
