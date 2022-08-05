@@ -10,6 +10,7 @@
 
 # production
 /build
+init.html
 
 # misc
 .DS_Store
