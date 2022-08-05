@@ -1,0 +1,37 @@
+@import '../variables.scss';
+
+.card {
+    margin-left: -10rem;
+    margin-bottom: 2rem;
+    max-width: 100%;
+    width: 35rem;
+    height: 20rem;
+    padding: 2rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $White;
+    border-radius: 1rem;
+    background-image: url(../../assets/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    img {
+        margin-bottom: 4rem;
+        width: 7rem;
+    }
+
+    h2 {
+        margin-bottom: 2.5rem;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+
+    aside {
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.4rem;
+    }
+}
