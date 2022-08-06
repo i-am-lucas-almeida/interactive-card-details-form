@@ -32,8 +32,15 @@ const App = () => {
 
   function handleBlur(e) {
 
-    const { name } = e.target;
+    const { name, value } = e.target;
     setFormData({ ...formData, touched: { ...formData.touched, [name]: true } });
+
+    if ((name === "validMonth") &&
+      (formData.validMonth.length === 1)) {
+
+      setFormData({ ...formData, validMonth: "0" + value });
+
+    }
 
   }
 
