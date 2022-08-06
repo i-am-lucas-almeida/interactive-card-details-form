@@ -1,6 +1,7 @@
 import styles from "../../sass/components/Form.module.scss";
 
 import { validate } from "./validateForm";
+import { NumberMask, CardNumberMask } from "../../utils/InputMask";
 
 const Form = ({ formData, handleBlur, handleChange }) => {
 
@@ -50,11 +51,11 @@ const Form = ({ formData, handleBlur, handleChange }) => {
                 <input
                     type="text"
                     name="cardNumber"
-                    maxLength={16}
-                    size={16}
+                    maxLength={22}
+                    size={22}
                     placeholder="ex. 1234 5678 9999 0000"
                     value={cardNumber}
-                    onChange={handleChange}
+                    onChange={(e) => handleChange(CardNumberMask(e))}
                     onBlur={handleBlur}
                     required
                     className={errors.cardNumber ? styles.error : ""}
@@ -79,10 +80,10 @@ const Form = ({ formData, handleBlur, handleChange }) => {
                             size={2}
                             placeholder="MM"
                             value={validMonth}
-                            onChange={handleChange}
+                            onChange={(e) => handleChange(NumberMask(e))}
                             onBlur={handleBlur}
                             required
-                            className={errors.date ? styles.error : ""}
+                            className={errors.validMonth ? styles.error : ""}
                         />
 
                         <input
@@ -92,10 +93,10 @@ const Form = ({ formData, handleBlur, handleChange }) => {
                             size={2}
                             placeholder="AA"
                             value={validYear}
-                            onChange={handleChange}
+                            onChange={(e) => handleChange(NumberMask(e))}
                             onBlur={handleBlur}
                             required
-                            className={errors.date ? styles.error : ""}
+                            className={errors.validYear ? styles.error : ""}
                         />
 
                     </div>
@@ -115,7 +116,7 @@ const Form = ({ formData, handleBlur, handleChange }) => {
                         size={3}
                         placeholder="ex. 123"
                         value={securityNumber}
-                        onChange={handleChange}
+                        onChange={(e) => handleChange(NumberMask(e))}
                         onBlur={handleBlur}
                         required
                         className={errors.securityNumber ? styles.error : ""}
