@@ -1,20 +1,23 @@
 @import '../variables.scss';
+@import '../mixins.scss';
 
 .card {
     margin-left: -10rem;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     max-width: 100%;
     width: 35rem;
     height: 20rem;
     padding: 2rem;
     font-size: 1.6rem;
-    font-weight: 400;
+    letter-spacing: .2rem;
+    font-weight: 500;
     color: $White;
     border-radius: 1rem;
     background-image: url(../../assets/bg-card-front.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    transform: scale(1.1);
 
     img {
         margin-bottom: 4rem;
@@ -22,7 +25,8 @@
     }
 
     h2 {
-        margin-bottom: 2.5rem;
+        font-size: 2rem;
+        margin-bottom: 3rem;
         text-transform: uppercase;
         font-weight: 400;
     }
@@ -32,6 +36,34 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+    }
+
+    @include desktop-size() {
+
+        margin-bottom: 3rem;
+        margin-left: -3rem;
+        transform: scale(1);
+
+    }
+
+    @include tablet-size() {
+
+        margin-left: 0;
+        order: 2;
+        z-index: 2;
+        position: absolute;
+        left: 0rem;
+        top: 15rem;
+
+    }
+
+    @include mobile-size() {
+
+        width: 100%;
+        transform: scale(.8);
+        left: -3.5rem;
+        top: 12rem;
+
     }
 }
