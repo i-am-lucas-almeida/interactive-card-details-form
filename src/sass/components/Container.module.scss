@@ -1,11 +1,12 @@
 @import '../variables.scss';
+@import '../mixins.scss';
 
 .container {
     margin: 0 auto;
     background-image: url(../../assets/bg-main-desktop.png);
     background-position: left 0;
     background-repeat: no-repeat;
-    background-size: 30% 100%;
+    background-size: 35% 100%;
     max-width: 100%;
     width: 1440px;
     height: 100vh;
@@ -13,9 +14,23 @@
     place-items: center;
 
     .container__content {
-        //margin-left: -50rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+
+    @include tablet-size() {
+
+        background-image: url(../../assets/bg-main-mobile.png);
+        background-size: 100% 35%;
+        background-position: top 0;
+        height: 100%;
+        padding-bottom: 5rem;
+
+        .container__content {
+            flex-direction: column;
+            justify-content: center;
+        }
+
     }
 }
