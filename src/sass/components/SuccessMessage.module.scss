@@ -1,0 +1,30 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.container {
+    width: 100%;
+    text-align: center;
+    letter-spacing: .2rem;
+
+    img {
+        width: 7rem;
+        margin-bottom: 3rem;
+    }
+
+    h2 {
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        color: $Very-dark-violet;
+        font-weight: 500;
+    }
+
+    p {
+        color: $Dark-grayish-violet;
+        font-size: 1.6rem;
+        margin-bottom: 3rem;
+    }
+
+    button {
+        @include button-style;
+    }
+}
