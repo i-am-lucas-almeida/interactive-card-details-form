@@ -1,5 +1,4 @@
 import styles from "../../sass/components/Form.module.scss";
-import "animate.css";
 
 import { useState } from "react";
 
