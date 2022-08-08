@@ -1,0 +1,37 @@
+@import './variables.scss';
+
+@mixin button-style {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: $Very-dark-violet;
+    color: $White;
+    font-weight: 500;
+    font-family: inherit;
+    font-size: 1.6rem;
+    border-radius: .75rem;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+        background-color: rgba($Very-dark-violet, .9);
+    }
+}
+
+@mixin desktop-size {
+    @media(max-width: 1040px) {
+        @content;
+    }
+}
+
+@mixin tablet-size {
+    @media(max-width: 850px) {
+        @content;
+    }
+}
+
+@mixin mobile-size {
+    @media(max-width: 500px) {
+        @content;
+    }
+}
