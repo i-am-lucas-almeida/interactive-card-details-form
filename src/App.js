@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import CardSection from "./components/CardSection";
+import CardSection from "./components/Cards/CardSection";
 import Container from "./components/Container";
 import Form from "./components/Form/Form";
 
