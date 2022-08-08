@@ -1,0 +1,20 @@
+@import '../mixins.scss';
+
+.container {
+    display: grid;
+    position: relative;
+
+    @include tablet-size() {
+
+        max-width: 100%;
+        width: 45rem;
+        height: 35rem;
+        margin-bottom: 2rem;
+
+    }
+
+    @include mobile-size() {
+        width: 35rem;
+        height: 30rem;
+    }
+}
